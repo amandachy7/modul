@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INAGURASI OCEANOVA 2025</title>
+
+    <style>
+        :root {
+            --green: #B7F542;
+            --green-dark: #9DDE2D;
+            --black: #000;
+            --white: #fff;
+            --bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            scroll-behavior: smooth;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            background: var(--green);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .navbar li {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navbar .active {
+            background: #FFD84D;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .hero-box {
+            position: relative;
+            margin: 40px auto;
+            max-width: 900px;
+            height: 420px;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .learn-more {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--green);
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            animation: bounce 1.5s infinite;
+            z-index: 2;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, -8px);
+            }
+        }
+
+        /* ================= HERO TITLE ================= */
+        .hero-title {
+            font-size: 68px;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero-title .highlight {
+            display: inline-block;
+            padding: 6px 22px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--green), #e8ff9a);
+            color: #000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            animation: slideDown 0.8s ease;
+        }
+
+        .hero-title .outline {
+            display: inline-block;
+            margin-top: 8px;
+            color: transparent;
+            -webkit-text-stroke: 3px #000;
+            text-stroke: 3px #000;
+            animation: fadeUp 1s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE TITLE */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .hero-title .outline {
+                -webkit-text-stroke: 2px #000;
+            }
+        }
+
+
+        /* ================= MENU ================= */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .card {
+            background: var(--green);
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.3s;
+            aspect-ratio: 3 / 4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex: 1;
+            opacity: 0.85;
+        }
+
+        .card p {
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            background: var(--green);
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        /* ================= DAY DRIVE ================= */
+        .day-section {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .day-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .day-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .day-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px 20px;
+            border: 3px solid var(--black);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .day-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .day-card p {
+            font-size: 14px;
+        }
+
+        .day-card:hover {
+            background: var(--green);
+            transform: translateY(-6px);
+        }
+
+        /* ================= ACTION ================= */
+        .action {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px 20px 70px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 3px solid var(--black);
+            cursor: pointer;
+            background: var(--white);
+        }
+
+        .btn.primary {
+            background: var(--green-dark);
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-box {
+                height: 260px;
+            }
+
+            .action {
+                flex-direction: column;
+            }
+        }
+
+        /* ================= DAY DRIVE INTERACTIVE ================= */
+        .day-section {
+            padding: 70px 40px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .day-section h2 {
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .day-section .subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .day-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .day-card {
+            position: relative;
+            background: var(--bg);
+            border-radius: 24px;
+            padding: 35px 25px 40px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            border: 2px solid transparent;
+        }
+
+        .day-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--green), #fff);
+            opacity: 0;
+            z-index: 0;
+            transition: 0.35s;
+        }
+
+        .day-card:hover::before {
+            opacity: 1;
+        }
+
+        .day-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .day-icon {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .day-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .day-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .day-btn {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 30px;
+            background: var(--green);
+            font-weight: bold;
+            font-size: 13px;
+            border: 2px solid var(--black);
+            transition: 0.3s;
+        }
+
+        .day-card:hover {
+            transform: translateY(-10px) scale(1.03);
+        }
+
+        .day-card:hover .day-btn {
+            background: var(--white);
+        }
+
+        .subtitle {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .desc {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-action {
+            min-width: 320px;
+        }
+
+        .form-btn {
+            width: 100%;
+            padding: 16px;
+            background: #3A99F2;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .form-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #fff;
+            padding: 80px 40px 40px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-text {
+            max-width: 520px;
+        }
+
+        .footer-text h2 {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .footer hr {
+            margin: 40px 0 20px;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* SPONSOR */
+        .sponsor {
+            margin-top: 60px;
+        }
+
+        .sponsor-title {
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 25px;
+            max-width: 600px;
+        }
+
+        .sponsor-grid img {
+            max-width: 100%;
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE FOOTER */
+        @media (max-width: 768px) {
+            .footer-top {
+                flex-direction: column;
+            }
+
+            .footer-action {
+                width: 100%;
+            }
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .navbar li.active a {
+            background: #FFD84D;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <strong>INAGURASI</strong>
+        <ul>
+            <li class="active"><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1 class="hero-title">
+            <span class="highlight">Inaugurasi</span><br>
+            <span class="outline">Oceanova 2025</span>
+        </h1>
+
+        <div class="hero-box">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="inagurasi.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="learn-more" onclick="scrollToMenu()">
+                LEARN MORE ↓
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu">
+        <div class="card" onclick="openLink('https://drive.google.com')">
+            <img src="4.jpg">
+            <p>Seputar Kampus</p>
+        </div>
+        <div class="card" onclick="openLink('https://drive.google.com')">
+            <img src="3.jpg">
+            <p>Layanan Kemahasiswaan</p>
+        </div>
+        <div class="card" onclick="openLink('https://drive.google.com')">
+            <img src="1.jpg">
+            <p>Organisasi Kemahasiswaan</p>
+        </div>
+        <div class="card" onclick="openLink('https://drive.google.com')">
+            <img src="2.jpg">
+            <p>Kanal Beasiswa</p>
+        </div>
+        <div class="card" onclick="openLink('https://drive.google.com')">
+            <img src="5.jpg">
+            <p>Portal Career</p>
+        </div>
+    </section>
+
+    <!-- DAY DRIVE -->
+    <section class="day-section">
+        <h2>Akses Materi Inagurasi</h2>
+        <p class="subtitle">Dokumentasi & modul kegiatan harian</p>
+
+        <div class="day-grid">
+
+            <div class="day-card"
+                onclick="openLink('https://drive.google.com/drive/folders/1QvyU1t-7Z-BcmWTUJ0UJ78sr9-EmH6ZU?usp=drive_link')">
+                <div class="day-card-content">
+                    <div class="day-icon">📘</div>
+                    <h3>Day 1</h3>
+                    <p>Pengenalan kampus, wawasan kebangsaan, dan tata tertib mahasiswa.</p>
+                    <span class="day-btn">Buka Google Drive</span>
+                </div>
+            </div>
+
+            <div class="day-card"
+                onclick="openLink('https://drive.google.com/drive/folders/1DfredkvtUZ4UCS3JgidTEkFG7W4XaOVG?usp=drive_link')">
+                <div class="day-card-content">
+                    <div class="day-icon">📗</div>
+                    <h3>Day 2</h3>
+                    <p>Materi organisasi kemahasiswaan dan pengembangan karakter.</p>
+                    <span class="day-btn">Buka Google Drive</span>
+                </div>
+            </div>
+
+            <div class="day-card"
+                onclick="openLink('https://drive.google.com/drive/folders/1al2m9wWE0Jzfcck5oYfkGCLf3hqdIv0x?usp=drive_link')">
+                <div class="day-card-content">
+                    <div class="day-icon">📙</div>
+                    <h3>Day 3</h3>
+                    <p>Penutupan, refleksi, serta dokumentasi kegiatan Inagurasi.</p>
+                    <span class="day-btn">Buka Google Drive</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ACTION -->
+    <section class="action"> <button class="btn primary" onclick="goModul()"> Modul
+            Inaugurasi </button> <button class="btn" onclick="goGallery()">Galeri Kegiatan</button>
+    </section> <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-text"> <small class="subtitle">Modul Inaugurasi
+                    Oceanova 2025</small>
+                <p class="desc">Panduan awal mahasiswa baru<br>dalam beradaptasi.</p>
+                <h2>TERIMA KASIH!</h2>
+                <p class="desc"> Inagurasi Oceanova 2025!</p>
+            </div>
+            <div class="footer-action"> <button class="form-btn"
+                    onclick="openLink('https://forms.gle/ISI_FORMULIR_KAMU')"> ISI FORMULIR </button> </div>
+        </div>
+        <hr>
+        <p class="copyright"> © 2025 | Modul I Panitia OrInagurasi Oceanova 2025. </p> <!-- SPONSOR -->
+        <div class="sponsor">
+            <p class="sponsor-title">OUR SPONSORSHIP</p>
+            <div class="sponsor-grid"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> </div>
+        </div>
+    </footer>
+    <script> function scrollToMenu() { document.getElementById("menu").scrollIntoView({ behavior: "smooth" }); } function openLink(url) { window.open(url, "_blank"); } </script>
+    <script>
+        function goGallery() {
+            window.location.href = "galeri.html";
+        }
+        function goModul() {
+            window.location.href = "modul.html";
+        }
+    </script>
+</body>
+
+</html>

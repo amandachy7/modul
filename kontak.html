@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INAGURASI OCEANOVA 2025</title>
+
+    <style>
+        :root {
+            --green: #B7F542;
+            --green-dark: #9DDE2D;
+            --black: #000;
+            --white: #fff;
+            --bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            scroll-behavior: smooth;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            background: var(--green);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .navbar li {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navbar .active {
+            background: #FFD84D;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+
+        /* ================= PAGE ================= */
+        .page {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .page h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .lead {
+            max-width: 650px;
+            line-height: 1.7;
+            margin-bottom: 60px;
+        }
+
+        /* ================= CONTACT ================= */
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            background: #fff;
+            border: 2px solid var(--green);
+            border-radius: 24px;
+            padding: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            background: var(--green);
+            transform: translateY(-8px);
+        }
+
+        .contact-card small {
+            opacity: 0.7;
+            font-size: 12px;
+        }
+
+        .contact-btn {
+            padding: 16px 32px;
+            background: #3A99F2;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        /* ================= ACTION ================= */
+        .action {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px 20px 70px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 3px solid var(--black);
+            cursor: pointer;
+            background: var(--white);
+        }
+
+        .btn.primary {
+            background: var(--green-dark);
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+            background: #fff;
+            padding: 80px 40px 40px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-text h2 {
+            font-size: 42px;
+            margin: 20px 0;
+        }
+
+        .desc {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-action {
+            min-width: 300px;
+        }
+
+        .form-btn {
+            width: 100%;
+            padding: 16px;
+            background: #3A99F2;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer hr {
+            margin: 40px 0 20px;
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .copyright {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* ================= SPONSOR ================= */
+        .sponsor {
+            margin-top: 50px;
+        }
+
+        .sponsor-title {
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 25px;
+            max-width: 600px;
+        }
+
+        .sponsor-grid img {
+            max-width: 100%;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .page h1 {
+                font-size: 36px;
+            }
+
+            .action {
+                flex-direction: column;
+            }
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .navbar li.active a {
+            background: #FFD84D;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <strong>INAGURASI</strong>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li class="active"><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="page">
+        <h1>Hubungi Kami</h1>
+        <p class="lead">
+            Kami siap membantu. Jangan ragu untuk menghubungi panitia
+            ORMABA PPMI Mesir melalui kanal berikut.
+        </p>
+
+        <div class="contact-cards">
+            <div class="contact-card" onclick="copyText('ormaba@ppmimesir.org')">
+                <h3>📧 Email</h3>
+                <p>ormaba@ppmimesir.org</p>
+                <small>Klik untuk menyalin</small>
+            </div>
+
+            <div class="contact-card" onclick="openLink('https://instagram.com/ormaba_ppmi_mesir')">
+                <h3>📸 Instagram</h3>
+                <p>@ormaba_ppmi_mesir</p>
+                <small>Buka Instagram</small>
+            </div>
+
+            <div class="contact-card" onclick="openLink('https://wa.me/62xxxxxxxxxx')">
+                <h3>💬 WhatsApp</h3>
+                <p>+62 xxxx xxxx</p>
+                <small>Chat sekarang</small>
+            </div>
+        </div>
+
+        <button class="contact-btn" onclick="openLink('https://forms.gle/ISI_FORMULIR')">
+            Kirim Pertanyaan
+        </button>
+    </section>
+
+    <!-- ACTION -->
+    <section class="action">
+        <button class="btn primary" onclick="openLink('https://drive.google.com')">Modul Inaugurasi</button>
+        <button class="btn">Galeri Kegiatan</button>
+    </section>
+
+    <!-- ACTION -->
+    <section class="action"> <button class="btn primary" onclick="goModul()"> Modul
+            Inaugurasi </button> <button class="btn" onclick="goGallery()">Galeri Kegiatan</button>
+    </section> <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-text"> <small class="subtitle">Modul Inaugurasi
+                    Oceanova 2025</small>
+                <p class="desc">Panduan awal mahasiswa baru<br>dalam beradaptasi.</p>
+                <h2>TERIMA KASIH!</h2>
+                <p class="desc"> Inagurasi Oceanova 2025!</p>
+            </div>
+            <div class="footer-action"> <button class="form-btn"
+                    onclick="openLink('https://forms.gle/ISI_FORMULIR_KAMU')"> ISI FORMULIR </button> </div>
+        </div>
+        <hr>
+        <p class="copyright"> © 2025 | Modul I Panitia OrInagurasi Oceanova 2025. </p> <!-- SPONSOR -->
+        <div class="sponsor">
+            <p class="sponsor-title">OUR SPONSORSHIP</p>
+            <div class="sponsor-grid"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> <img src="https://via.placeholder.com/100"> <img
+                    src="https://via.placeholder.com/100"> </div>
+        </div>
+    </footer>
+    <script>
+        function goGallery() {
+            window.location.href = "galeri.html";
+        }
+        function goModul() {
+            window.location.href = "modul.html";
+        }
+    </script>
+    <script>
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text);
+            alert("Disalin: " + text);
+        }
+    </script>
+    <script>
+        function goGallery() {
+            window.location.href = "galeri.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Kegiatan</title>
+
+    <style>
+        :root {
+            --green: #B7F542;
+            --green-dark: #9DDE2D;
+            --black: #000;
+            --white: #fff;
+            --bg: #f5f5f5;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--black);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 70px 30px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            opacity: .7;
+            font-size: 14px;
+        }
+
+        /* ===== MODUL GRID ===== */
+        .modul {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+
+        .modul-card {
+            text-decoration: none;
+            color: var(--black);
+            background:
+                linear-gradient(135deg, var(--green), var(--green-dark));
+            border-radius: 26px;
+            padding: 26px 26px 30px;
+            position: relative;
+            overflow: hidden;
+            transition: .35s;
+        }
+
+        /* glass overlay */
+        .modul-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, .18);
+            opacity: 0;
+            transition: .35s;
+        }
+
+        .modul-card:hover::before {
+            opacity: 1;
+        }
+
+        .modul-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .18);
+        }
+
+        /* CONTENT */
+        .modul-number {
+            font-size: 40px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .modul-title {
+            margin-top: 10px;
+            font-size: 15px;
+            line-height: 1.4;
+            opacity: .9;
+        }
+
+        /* CTA */
+        .modul-open {
+            margin-top: 22px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .75);
+            transition: .3s;
+        }
+
+        .modul-card:hover .modul-open {
+            background: #fff;
+            transform: translateX(4px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            margin-top: 60px;
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 26px;
+            font-size: 12px;
+        }
+
+        /* ===== MOBILE ===== */
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .modul {
+                padding: 24px;
+                gap: 22px;
+            }
+
+            .modul-number {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Modul Kegiatan</h1>
+        <p>Akses seluruh modul Inagurasi Oceanova 2025</p>
+    </section>
+
+    <!-- MODUL -->
+    <section class="modul">
+
+        <a href="https://docs.google.com/presentation/d/1mgu3PpENFKLtXtQzqvhNnAx08sSmZRF8/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            target="_blank" class="modul-card">
+            <div class="modul-number">01</div>
+            <div class="modul-title">Bidang Kemahasiswaan Wadir 3</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1ZgmIpBy2BrNRujKrb-TmXiFnXV6yNOGd/view?usp=sharing" target="_blank"
+            class="modul-card">
+            <div class="modul-number">02</div>
+            <div class="modul-title">Materi Society & Industry</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1-sU_jXX8WTdZeObOlZnC5lRYQYPkQy12/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            target="_blank" class="modul-card">
+            <div class="modul-number">03</div>
+            <div class="modul-title">Sosialisasi E-Learning</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1i7X5WwGoPAIfAUTxmxLI5pFh4amAyM1H/view?usp=sharing" target="_blank"
+            class="modul-card">
+            <div class="modul-number">04</div>
+            <div class="modul-title">Media Publikasi & Sosial Media Polibatam</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1gtJ43RwYxTbV43f26zUdJIv509ho2W4D/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            target="_blank" class="modul-card">
+            <div class="modul-number">05</div>
+            <div class="modul-title">Pengenalan Jurusan Elektro Mahasiswa Baru</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1JmUmfersu5cQMNhNPB33Pl_a2LPCc-Np/view?usp=sharing" target="_blank"
+            class="modul-card">
+            <div class="modul-number">06</div>
+            <div class="modul-title">PPKMB 2025</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/10pwa7wFz5WtFUMfoSox1VP_-m6wn1lrP/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            target="_blank" class="modul-card">
+            <div class="modul-number">07</div>
+            <div class="modul-title">PPKMB Satgas K3L</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1ghSm1UVpcELOPIvGS2qSdU9aDpJfQRT3/view?usp=sharing" target="_blank"
+            class="modul-card">
+            <div class="modul-number">08</div>
+            <div class="modul-title">Sosialisasi Badan Pengawas Inaugurasi Politeknik Negeri Batam 2025</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1mfoXa0KcsR_lgP37Oy4ildL2Ejvvn3s1/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            target="_blank" class="modul-card">
+            <div class="modul-number">09</div>
+            <div class="modul-title">Sosialisasi Pengenalan Kampus Wadir 1</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1bB15JwF0ODRmQvZwGZEufhitTiUOAfeq/edit?usp=drive_link&ouid=100061742406053411902&rtpof=true&sd=true"
+            class="modul-card">
+            <div class="modul-number">10</div>
+            <div class="modul-title">Paparan Inagurasi</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1eVcqcx1A_eo4Qg3INGkeXJjh8mCGatzy/view?usp=sharing" class="modul-card">
+            <div class="modul-number">11</div>
+            <div class="modul-title">Profil Mahasiswa Pancasila, Pkkmb & Inaugurasi Polibatam 2025 26 Agustus 2025</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1C4ge6RgkoNbkWcOZCnuM5MJJRvFpi6Yz/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            class="modul-card">
+            <div class="modul-number">12</div>
+            <div class="modul-title">Materi Literasi Keuangan - Galeri Investasi</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1ujVhfLr0ioCuIWHooS6vAa21t05-DkaV/view?usp=sharing" class="modul-card">
+            <div class="modul-number">13</div>
+            <div class="modul-title">GROWTH MINDSET</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1ma-vc_biteWzejpY6O9LepL7L2lYVxiz/view?usp=sharing" class="modul-card">
+            <div class="modul-number">14</div>
+            <div class="modul-title">SATGAS PPKPT</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1BsQKzF6EtWCV7zvKPWlFdoUgWwmNLIsI/view?usp=sharing" class="modul-card">
+            <div class="modul-number">15</div>
+            <div class="modul-title">Sosialisasi UPA Perpustakaan</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1AWFpDBiTrQetgGn7eFUt2wwh0yeaE3oH/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            class="modul-card">
+            <div class="modul-number">16</div>
+            <div class="modul-title">BRAIL 2025</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1UQBF62HHB8JaEonfyuIcX0i4o-MT9lpy/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            class="modul-card">
+            <div class="modul-number">17</div>
+            <div class="modul-title">MAPRES 101</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1464_iM_jphXIqmETXTyEGOwfKHlgMOY-/view?usp=sharing" class="modul-card">
+            <div class="modul-number">18</div>
+            <div class="modul-title">Mengenal PCLabs Center of Excellence Cyber Security Polibatam</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://docs.google.com/presentation/d/1-cWNt-ZRf9NcsnoNVAnwpJkFgRKnKIFD/edit?usp=sharing&ouid=100061742406053411902&rtpof=true&sd=true"
+            class="modul-card">
+            <div class="modul-number">19</div>
+            <div class="modul-title">POLIBATAM CAR KMLI </div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/19sIeJ9EMk6TC2rRKxczkbxQIBagDr_sm/view?usp=sharing" class="modul-card">
+            <div class="modul-number">20</div>
+            <div class="modul-title">PPT Komunitas KSPM</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1axDHbXQ_MIBTZQiopaSzWXWERoSWxrMZ/view?usp=sharing" class="modul-card">
+            <div class="modul-number">21</div>
+            <div class="modul-title">Presentasi Sosialisasi P2MW</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1M1CpexsrPvnk9FMBLSGmMhD10VS5hdsT/view?usp=sharing" class="modul-card">
+            <div class="modul-number">22</div>
+            <div class="modul-title">Sosialisasi MABA 2025-PKM</div>
+            <span class="modul-open">Buka Modul →</span>
+        </a>
+    </section>
+
+    <footer>
+        © 2025 • Modul Inagurasi Oceanova 2025
+    </footer>
+
+</body>
+
+</html>

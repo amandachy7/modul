@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORMABA PPMI MESIR 2025</title>
+
+    <style>
+        :root {
+            --green: #B7F542;
+            --green-dark: #9DDE2D;
+            --black: #000;
+            --white: #fff;
+            --bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            scroll-behavior: smooth;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            background: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav .logo {
+            font-weight: 800;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav li {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        nav li.active {
+            color: #8c1d18;
+        }
+
+        /* SECTION */
+        section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* HERO */
+        #beranda h1 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .hero-box {
+            margin-top: 40px;
+            height: 420px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #ddd, #bbb);
+            position: relative;
+        }
+
+        .learn {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--green);
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* TENTANG */
+        #tentang p {
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* LAYANAN */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--green);
+            aspect-ratio: 3/4;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        /* KONTAK */
+        .contact-box {
+            max-width: 500px;
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #fff;
+            padding: 80px 40px 40px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-text {
+            max-width: 520px;
+        }
+
+        .footer-text h2 {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .form-btn {
+            padding: 16px 28px;
+            background: #3A99F2;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer hr {
+            margin: 40px 0 20px;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            #beranda h1 {
+                font-size: 42px;
+            }
+
+            .menu {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="logo" onclick="go('index.html')">ORMABA</div>
+
+        <ul class="nav-menu">
+            <li onclick="go('index.html')">Beranda</li>
+            <li onclick="go('tentang.html')">Tentang</li>
+            <li class="active" onclick="go('layanan.html')">Layanan</li>
+            <li onclick="go('kontak.html')">Kontak</li>
+        </ul>
+    </nav>
+
+    <!-- BERANDA -->
+    <section id="beranda">
+        <h1>ORMABA PPMI<br>MESIR 2025</h1>
+
+        <div class="hero-box">
+            <div class="learn" onclick="go('layanan')">LEARN MORE ↓</div>
+        </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang">
+        <h2>Tentang ORMABA</h2>
+        <p>
+            ORMABA PPMI Mesir merupakan kegiatan orientasi mahasiswa baru
+            yang bertujuan membantu proses adaptasi akademik, sosial,
+            dan budaya selama menempuh studi.
+        </p>
+    </section>
+
+    <!-- LAYANAN -->
+    <section id="layanan">
+        <h2>Layanan</h2>
+
+        <div class="menu">
+            <div class="card" onclick="openLink('https://drive.google.com')">
+                <img src="https://via.placeholder.com/400x600">
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x600">
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x600">
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak">
+        <h2>Kontak</h2>
+
+        <div class="contact-box">
+            <p>Email: ormaba@ppmimesir.org</p>
+            <p>Instagram: @ormaba_ppmi</p>
+            <p>WhatsApp: +62 xxxx xxxx</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-text">
+                <small>MODUL ORMABA PPMI MESIR 2025</small>
+                <h2>TERIMA KASIH!</h2>
+                <p>
+                    Bantu kami meningkatkan ORMABA PPMI Mesir
+                    dengan mengisi formulir post-test.
+                </p>
+            </div>
+
+            <button class="form-btn" onclick="openLink('https://forms.gle/ISI_FORMULIR')">
+                ISI FORMULIR
+            </button>
+        </div>
+
+        <hr>
+        <p>© 2025 | Modul I Panitia ORMABA PPMI Mesir.</p>
+    </footer>
+
+    <script>
+        function go(id) {
+            document.querySelectorAll("nav li")
+                .forEach(li => li.classList.remove("active"));
+            event.target.classList.add("active");
+            document.getElementById(id)
+                .scrollIntoView({ behavior: "smooth" });
+        }
+
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
